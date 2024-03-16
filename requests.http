@@ -1,0 +1,9 @@
+@host=http://0.0.0.0:8000
+
+###
+GET {{host}}
+
+
+###
+# @name todo
+GET {{host}}/todo
