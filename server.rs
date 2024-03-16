@@ -1,13 +1,14 @@
-mod handlers;
-mod urls;
-use crate::urls::urls;
-
+mod core {
+    pub mod urls;
+    pub mod handlers;
+}
+use crate::core::urls;
 
 // tokio makes async programming easier and is a stack on top of the rest
 #[tokio::main]
 async fn main() {
     // build our application with a route
-    let app = urls();
+    let app = urls::urls();
 
     // serve the route
     let listener = tokio::net::TcpListener::bind("127.0.0.1:8000")
