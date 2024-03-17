@@ -1,6 +1,7 @@
 mod core {
     pub mod urls;
     pub mod handlers;
+    pub mod responses;
 }
 use crate::core::urls;
 
