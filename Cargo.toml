@@ -6,15 +6,18 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-axum = "0.7.4"
-hyper = "1.2.0"
-serde = { version = "1.0.197", features = ["derive"] }
-serde_json = "1.0.114"
-tokio = { version = "1.36.0", features = ["full"] }
-tower = "0.4.13"
-tower-http = "0.5.2"
-tracing = "0.1.40"
-tracing-subscriber = "0.3.18"
+diesel_cli = { version = "2.1.1", default-features = false, features = ["postgres"] }
+dotenvy = "0.15.7"
+axum = "0.7.2"
+chrono = { version = "0.4.31", features = ["serde"] }
+dotenv = "0.15.0"
+serde = { version = "1.0.193", features = ["derive"] }
+serde_json = "1.0.108"
+sqlx = { version = "0.7.3", features = ["runtime-async-std-native-tls", "mysql", "chrono", "uuid"] }
+tokio = { version = "1.35.1", features = ["full"] }
+tower-http = { version = "0.5.0", features = ["cors"] }
+uuid = { version = "1.6.1", features = ["serde", "v4"] }
+
 
 [[bin]]
 name = "server"

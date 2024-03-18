@@ -5,5 +5,36 @@ GET {{host}}
 
 
 ###
-# @name todo
+# @name Tasks list 
 GET {{host}}/todo
+
+###
+# @name Task detail by id 
+GET {{host}}/todo/1
+
+
+###
+# @name Create Task
+POST {{host}}/todo/create
+Content-Type: application/json
+
+{
+    "title": "Your Todo Title"
+}
+
+
+###
+# @name update Task
+PATCH {{host}}/todo/1/update
+Content-Type: application/json
+
+{
+    "title": "title 1"
+}
+
+
+###
+# @name delete Task
+DELETE {{host}}/todo/1/delete
+Content-Type: application/json
+

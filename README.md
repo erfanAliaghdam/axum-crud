@@ -1,8 +1,12 @@
-## How to run the server?
-> cargo run
+## How to run the server on local?
+Step 1: setup database:
+    - mysql server:
+        > docker-compose up --build -d
+    - initialize migrations:
+        > sqlx migrate run 
+Step 2: run server:
+    > cargo run
 
 ## How to access server?
-- approach 1:
-    > send request directly to 0.0.0.0:8000
-- approach 2:
-    > use requests.http file inside your IDE
+    - use requests.http file inside your IDE
+    - 
