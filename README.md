@@ -9,7 +9,7 @@ Step 1: setup database:
 
 - initialize migrations:
     
-> sqlx migrate run
+> cargo sqlx migrate run
 
 Step 2: run server:
 > cargo run
